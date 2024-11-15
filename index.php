@@ -1,5 +1,5 @@
 <!-- index.php -->
 <?php
-include 'public/config.php';
-include 'public/home.php'; 
+include 'panda-sonido/public/config.php';
+include 'panda-sonido/public/home.php'; 
 ?>
