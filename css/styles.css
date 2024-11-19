@@ -1,0 +1,493 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #017db0;
+    /* margin-top: 80px; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    /* background-color: #00a2e2; */
+    background-color: #00415d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 100%;
+    height: 55px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    border-bottom: var(--border);
+    z-index: 1;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nombre {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+    
+}
+
+.logo-nombre h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* nav ul li {
+    margin-left: 20px;
+} */
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: #00415d;
+    
+    border-radius: 20px;
+}
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.producto {
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #00a2e2;
+    backdrop-filter: blur(50px);
+    text-decoration: none;
+}
+
+.producto a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.producto img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+form {
+    width: 600px;
+    padding: 20px;
+    margin: 80px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+form input, form textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    box-sizing: border-box;
+}
+
+form button {
+    color: white;
+    background-color: #00a2e2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: calc(100% - 10px);
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #017db0;
+}
+/* Para la vista de producto: imagen a la izquierda y descripción a la derecha */
+.detalle-producto .descripcion {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre la imagen y la descripción */
+    text-align: left;
+    margin: 90px;
+}
+
+/* Estilo de la imagen de portada */
+.detalle-producto .descripcion img {
+    max-width: 50%; /* Imagen ocupa el 50% del ancho */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Contenedor de la información del producto */
+.detalle-producto .descripcion .info {
+    flex: 1; /* Toma el espacio restante a la derecha */
+}
+
+.detalle-producto .descripcion h1 {
+    font-size: 28px;
+    color: #000000;
+}
+
+.detalle-producto .descripcion p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.detalle-producto .descripcion span {
+    font-size: 20px;
+    color: #17e263;
+    font-weight: bold;
+}
+
+
+/* Asegura que la galería tenga un ancho máximo y se centre */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* max-width: 800px; Ancho máximo de la galería */
+   margin: 10px;
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+/* Ajusta el estilo de las imágenes y videos en la galería */
+.galeria img {
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    max-width: calc(33.33% - 10px); /* Ajusta el ancho de cada imagen/video */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para el video de YouTube */
+/* .video-youtube iframe {
+    width: 100%; 
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+} */
+.video-youtube {
+    width: 100%; /* Ocupará todo el ancho del contenedor */
+    /* max-width: 800px; Ancho máximo del video */
+    height: auto; /* Ajustar la altura de manera proporcional */
+    aspect-ratio: 16 / 9; /* Mantener una relación de aspecto 16:9 */
+    margin: 20px auto; /* Centrar el video horizontalmente con margen arriba/abajo */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evitar que contenido extra se salga */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.video-youtube iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Eliminar bordes del iframe */
+}
+
+.presentacion-negocio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    background-color: #000000;
+}
+
+.contenido-presentacion {
+    max-width: 50%;
+}
+
+.contenido-presentacion h1 {
+    font-size: 36px;
+    color: #0fb7ff;
+    margin-bottom: 20px;
+}
+
+.contenido-presentacion p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.contacto-redes a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #5f4f4f;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 10px; /* Espacio alrededor del ícono y texto */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.contacto-redes a:hover {
+    background-color: #f0f0f0; /* Cambio de fondo al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+}
+
+.contacto-redes img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.contacto-redes span {
+    font-size: 16px;
+    color: #000000; /* Color del texto del link */
+}
+
+/* Ajuste del espacio entre los íconos */
+.contacto-redes {
+    display: flex;
+    gap: 20px; /* Espacio entre Instagram y WhatsApp */
+    margin-top: 10px;
+}
+
+
+/* Estilos del botón de más info (por si lo agregas más adelante) */
+.btn-mas-info {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00415d;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-mas-info:hover {
+    background-color: #006a8e;
+}
+
+.btn-editar{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(61 170 255 / 80%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-eliminar{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.acciones{
+    margin-top: 20px;
+}
+
+.imagen-presentacion img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* LOGIN */
+
+
+/* Estilos del formulario */
+form {
+    background-color: #fff;
+    width: 600px;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Estilos del título */
+form h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+/* Etiquetas y campos de entrada */
+form label {
+    display: block;
+    text-align: left;
+    margin: 1em 0 0.5em;
+    font-weight: bold;
+    color: #666;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo al hacer foco en los campos */
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+}
+
+/* Botón de envío */
+form button[type="submit"] {
+    width: 100%;
+    padding: 0.8em;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+form button[type="submit"]:hover {
+    background-color: #5548c8;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+    /* Para dispositivos móviles */
+
+    .galeria img, 
+    .galeria video {
+        max-width: 100%; /* En móviles, las imágenes y videos ocupan todo el ancho */
+    }
+    
+
+    /* Estilos para pantallas grandes */
+    .detalle-producto .descripcion {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .detalle-producto .descripcion img {
+        max-width: 50%;
+        margin-right: 20px;
+    }
+
+    .detalle-producto .descripcion p {
+        flex: 1;
+    }
+
+    .presentacion-negocio {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenido-presentacion {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .imagen-presentacion img {
+        max-width: 100%;
+    }
+}
+
+footer {
+    background-color: #00415d;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los íconos */
+}
+
+.social-links a {
+    display: flex;
+    align-items: center; /* Alinea las imágenes y el texto verticalmente */
+    gap: 8px; /* Espacio entre la imagen y el texto */
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/* Estilo general para las imágenes de la página */
+img {
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
