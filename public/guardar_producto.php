@@ -9,8 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $youtube_iframe = $_POST['youtube_iframe'];
 
     // Directorio de destino para las imágenes y videos
-    $target_dir = "../imagenes/";
+    //$target_dir = "../imagenes/";
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/imagenes/';
 
+    if (!is_dir($imagenesDir)) {
+    mkdir($imagenesDir, 0777, true); // Crea el directorio con permisos completos
+    }
+    chmod($imagenesDir, 0777); // Asegura permisos de escritura
+    
     // Inicializar variables para la portada y galerías
     $portada_path = null;
     $galerias = [];
