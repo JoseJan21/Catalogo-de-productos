@@ -1,9 +1,9 @@
 <!-- config.php -->
 <?php
-$servername = "localhost";
+$servername = "railway";
 $username = "root";
-$password = "";
-$dbname = "catalogo";
+$password = "pQOIedGmFzPBSivguHezVovIWLjXWmHW";
+$dbname = "railway";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
