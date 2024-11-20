@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?phpsession_start();
 
 // Obtener las variables de entorno usando $_ENV
 $DB_HOST = $_ENV['DB_HOST'];
@@ -9,10 +8,10 @@ $DB_NAME = $_ENV['DB_NAME'];
 $DB_PORT = $_ENV['DB_PORT'];
 
 // Crear la conexión
-$db = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME, $DB_PORT);
+$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME, $DB_PORT);
 
 // Verificar la conexión
-if (!$db) {
+if (!$conn) {
     die("Conexión fallida: " . mysqli_connect_error());
 }
 ?>
