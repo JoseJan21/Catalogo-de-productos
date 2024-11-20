@@ -1,4 +1,5 @@
-<?phpsession_start();
+<?php
+session_start(); // Asegúrate de que esté en la primera línea
 
 // Obtener las variables de entorno usando $_ENV
 $DB_HOST = $_ENV['DB_HOST'];
