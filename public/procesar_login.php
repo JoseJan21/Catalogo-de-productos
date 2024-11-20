@@ -3,8 +3,8 @@ session_start();
 include 'config.php'; // Conexión a la base de datos
 
 // Obtener datos del formulario
-$email = $_POST['email'];
-$password = $_POST['password'];
+$email = trim($_POST['email']);
+$password = trim($_POST['password']);
 
 // Consulta para verificar al usuario administrador
 $query = "SELECT * FROM usuarios WHERE email = ? LIMIT 1";
@@ -24,13 +24,15 @@ if ($result->num_rows == 1) {
         
         // Redirigir al home
         header("Location: home.php");
-        exit();
+        exit(); // Terminar el script
     } else {
         // Contraseña incorrecta
-        echo "Contraseña incorrecta.";
+        header("Location: login.php?error=incorrect_password");
+        exit(); // Terminar el script
     }
 } else {
     // Usuario no encontrado
-    echo "Correo electrónico no encontrado.";
+    header("Location: login.php?error=user_not_found");
+    exit(); // Terminar el script
 }
 ?>
