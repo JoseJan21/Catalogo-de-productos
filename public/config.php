@@ -1,16 +1,18 @@
 <?php
-// Leer las variables de entorno proporcionadas por Railway
-$servername = getenv('MYSQLHOST');       // Dirección del servidor (host)
-$username = getenv('MYSQLUSER');         // Usuario de la base de datos
-$password = getenv('MYSQLPASSWORD');     // Contraseña del usuario
-$dbname = getenv('MYSQLDATABASE');       // Nombre de la base de datos
-$port = getenv('MYSQLPORT');             // Puerto de la base de datos
+session_start();
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+// Obtener las variables de entorno usando $_ENV
+$DB_HOST = $_ENV['DB_HOST'];
+$DB_USER = $_ENV['DB_USER'];
+$DB_PASSWORD = $_ENV['DB_PASSWORD'];
+$DB_NAME = $_ENV['DB_NAME'];
+$DB_PORT = $_ENV['DB_PORT'];
 
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+// Crear la conexión
+$db = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME, $DB_PORT);
+
+// Verificar la conexión
+if (!$db) {
+    die("Conexión fallida: " . mysqli_connect_error());
 }
 ?>
