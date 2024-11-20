@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/imagenes/';
 
     if (!is_dir($target_dir)) {
-    mkdir($imagenesDir, 0777, true); // Crea el directorio con permisos completos
+    mkdir($target_dir, 0777, true); // Crea el directorio con permisos completos
     }
-    chmod($imagenesDir, 0777); // Asegura permisos de escritura
+    chmod($target_dir, 0777); // Asegura permisos de escritura
     
     // Inicializar variables para la portada y galerías
     $portada_path = null;
