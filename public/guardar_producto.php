@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Intentar subir la imagen de portada
         if ($portada_uploadOk) {
-            if (move_uploaded_file($_FILES["portada"]["tmp_name"], $portada_file)) {
+            if (move_uploaded_file($_FILES["portada"]["tmp_name"], $portada_path)) {
                 $portada_path = $portada_filename; // Guardar solo el nombre del archivo
             } else {
                 echo "Lo siento, hubo un error al subir la imagen de portada.<br>";
