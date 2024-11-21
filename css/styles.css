@@ -4,6 +4,7 @@ body {
     padding: 0;
     padding-top: 55px; /* Altura del header */
     background-color: #017db0;
+    /* margin-top: 80px; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +14,6 @@ body {
 a {
     text-decoration: none;
 }
-
 /* Header */
 header {
     background-color: #00415d;
@@ -73,8 +73,13 @@ nav ul li a:hover {
     background-color: #006a8e;
     border-radius: 5px;
 }
+/* nav ul li a:hover {
+    color: #ffffff;
+    background-color: #00415d;
+    
+    border-radius: 20px;
+} */
 
-/* Catalogo */
 .catalogo {
     display: flex;
     flex-wrap: wrap;
@@ -106,17 +111,17 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 20px;
 }
-
-/* Detalle producto */
+/* Para la vista de producto: imagen a la izquierda y descripción a la derecha */
 .detalle-producto .descripcion {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 20px;
+    gap: 20px; /* Espacio entre la imagen y la descripción */
     text-align: left;
     margin: 90px;
 }
 
+/* Estilo de la imagen de portada */
 .detalle-producto .descripcion img {
     max-width: 50%; /* Imagen ocupa el 50% del ancho */
     height: auto;
@@ -125,8 +130,9 @@ nav ul li a:hover {
     margin-right: 20px;
 }
 
+/* Contenedor de la información del producto */
 .detalle-producto .descripcion .info {
-    flex: 1;
+    flex: 1; /* Toma el espacio restante a la derecha */
 }
 
 .detalle-producto .descripcion h1 {
@@ -145,81 +151,120 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Galería de imágenes */
+
+/* Asegura que la galería tenga un ancho máximo y se centre */
+/* Estilo actualizado para la galería */
 .galeria {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* Máximo 3 columnas */
-    gap: 10px;
+    gap: 10px; /* Espacio entre las imágenes */
     padding: 20px;
     margin: 0 auto;
 }
 
-@media (max-width: 1000px) {
-    /* Ajustes para pantallas más pequeñas */
-    .galeria {
-        grid-template-columns: repeat(1, minmax(0, 1fr)); /* Una sola columna en pantallas pequeñas */
+/* Menú oculto por defecto en pantallas pequeñas */
+nav {
+    display: none;
+}
+
+/* Cuando se activa la clase 'active', se muestra el menú */
+nav.active {
+    display: block;
+}
+
+/* Estilo del botón hamburguesa */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Se esconde en pantallas grandes */
+}
+/* Estilos para los enlaces del header */
+header nav {
+    display: none; /* Ocultar los enlaces por defecto en pantallas pequeñas */
+  }
+  
+  header .menu-hamburguesa {
+    display: block; /* Mostrar el menú hamburguesa por defecto */
+  }
+
+/* Menú en pantallas pequeñas (máximo 768px) */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón en pantallas pequeñas */
     }
 
-    /* Logo y nombre */
-    .logo-nombre {
-        align-items: center;
+    nav ul {
+        flex-direction: column; /* Muestra los enlaces de forma vertical */
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .galeria {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+     /* Logo y nombre */
+     .logo-nombre {
+        align-items: center; /* Centrar logo y texto en pantallas pequeñas */
     }
 
     .logo-nombre h1 {
-        font-size: 20px;
+        font-size: 20px; /* Reducir el tamaño del texto en pantallas pequeñas */
     }
 
-    /* Navegación */
+    /* Navegación: convertir en un menú hamburguesa */
     nav ul {
         width: 100%;
         text-align: center;
         padding: 0;
-        flex-direction: column; /* Menú vertical */
     }
 
     nav ul li {
         margin: 5px 0;
     }
-
     nav {
-        display: none; /* El menú estará oculto por defecto en pantallas pequeñas */
+        display: none; /* El menú estará visible siempre en pantallas grandes */
     }
 
-    /* Botón hamburguesa */
+    /* Botón de navegación */
     .menu-toggle {
         display: block;
         cursor: pointer;
         font-size: 30px;
-        /* color: #fff; */
+        color: #fff;
         background: none;
         border: none;
     }
 
+    nav ul {
+        display: none; /* Ocultar el menú por defecto en dispositivos móviles */
+        flex-direction: column; /* Muestra los enlaces de forma vertical */
+        padding: 10px 0;
+    }
+
     /* Mostrar menú cuando se active el toggle */
-    nav.active {
-        display: block;
+    nav.active ul {
+        display: flex;
     }
 
     nav ul li a {
-        font-size: 18px;
+        font-size: 18px; /* Aumentar el tamaño del texto */
         padding: 10px;
     }
+    header nav {
+        display: block; /* Mostrar los enlaces cuando la pantalla sea mayor a 1000px */
+      }
+    
+      header .menu-hamburguesa {
+        display: none; /* Ocultar el menú hamburguesa cuando la pantalla sea mayor a 1000px */
+      }
 }
-nav {
-    display: block;
-}
-
-@media (max-width: 600px) {
-    /* Ajustes adicionales para pantallas muy pequeñas */
-    .logo-nombre h1 {
-        font-size: 18px;
-    }
-
-    .producto img {
-        height: 400px; /* Reducir el tamaño de la imagen en pantallas pequeñas */
-    }
-}
-
 
 .galeria img {
     width: 100%;
@@ -486,6 +531,9 @@ form button[type="submit"]:hover {
     .header {
         height: 100px;
     }
+    .logo{
+        height: 80px;
+    }
     .btn-editar{
         padding: 30px 70px;
         font-size: 50px;
@@ -499,6 +547,15 @@ form button[type="submit"]:hover {
         border-radius: 30px;
     }
 
+     /* Ajuste para dispositivos móviles */
+     .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .logo-nombre {
+        margin-bottom: 10px;
+    }
     nav ul {
         flex-direction: column;
         margin-top: 10px;
