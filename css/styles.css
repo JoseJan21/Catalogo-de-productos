@@ -125,7 +125,7 @@ nav ul li a {
 .detalle-producto .descripcion img {
     max-width: 50%; /* Imagen ocupa el 50% del ancho */
     height: auto;
-    border-radius: 80px;
+    border-radius: 10px;
     object-fit: cover;
     margin-right: 20px;
 }
@@ -153,24 +153,26 @@ nav ul li a {
 
 
 /* Asegura que la galería tenga un ancho máximo y se centre */
+/* Contenedor de la galería */
 .galeria {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* max-width: 800px; Ancho máximo de la galería */
-    margin: 10px;
-    gap: 10px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la línea siguiente si no caben */
+    justify-content: space-between; /* Distribuye espacio uniformemente */
+    gap: 10px; /* Espaciado entre los elementos */
+    margin: 10px auto; /* Centra la galería horizontalmente */
+    max-width: 800px; /* Ancho máximo de la galería */
 }
 
-/* Ajusta el estilo de las imágenes y videos en la galería */
+/* Estilo para las imágenes de la galería */
 .galeria img {
-    width: 100%; /* Ocupar todo el ancho del contenedor */
-    max-width: calc(33.33% - 10px); 
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-    box-sizing: border-box;
+    flex: 1 1 calc(33.33% - 10px); /* Cada imagen ocupa un tercio del contenedor menos el gap */
+    max-width: calc(33.33% - 10px); /* Mismo cálculo para evitar conflictos */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover; /* Asegura que la imagen se recorte bien si es necesario */
+    box-sizing: border-box; /* Incluye el padding y border en las dimensiones */
 }
+
 
 /* Estilos específicos para el video de YouTube */
 /* .video-youtube iframe {

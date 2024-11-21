@@ -4,9 +4,6 @@ include 'config.php';
 
 // Verificar si el usuario ha iniciado sesión y tiene una ID de usuario en la sesión
 $is_logged_in = isset($_SESSION['usuario_id']);
-if (!$is_logged_in) {
-    echo "<p style='color:red;'>No se ha detectado una sesión activa. Inicia sesión para ver las opciones de edición y eliminación.</p>";
-}
 
 // Verificar si el ID del producto está en la URL
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
