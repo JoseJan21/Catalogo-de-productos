@@ -22,8 +22,14 @@
             <ul>
                 <li><a href="../public/home.php">Inicio</a></li>
                 <?php if (isset($_SESSION['usuario_id'])): ?>
-                    <li><a href="../public/crear_producto.php">Crear Producto</a></li>
-                    <!-- <li><a href="../public/crear_usuario.php">Crear Usuario</a></li> Enlace a crear usuario -->
+                    <!-- Menú desplegable -->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Opciones</a>
+                        <div class="dropdown-content">
+                            <a href="../public/crear_producto.php">Crear Producto</a>
+                            <!-- <a href="../public/crear_usuario.php">Crear Usuario</a> Enlace a crear usuario -->
+                        </div>
+                    </li>
                     <li><a href="../public/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a></li>
                 <?php endif; ?>
             </ul>
