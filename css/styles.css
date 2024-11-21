@@ -370,13 +370,14 @@ form button[type="submit"]:hover {
 
 @media (max-width: 768px) {
     /* Para dispositivos móviles */
-
-    /* .galeria img, 
+    .galeria{
+        display: flow;
+    }
     .galeria video {
-        max-width: 100%; En móviles, las imágenes y videos ocupan todo el ancho
+        max-width: 100%; /*En móviles, las imágenes y videos ocupan todo el ancho */
         margin: 0 auto 10px;
-
-    } */
+    }
+    
     
 
     /* Estilos para pantallas grandes */
