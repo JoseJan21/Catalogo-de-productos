@@ -182,11 +182,11 @@ nav.active {
 }
 /* Estilos para los enlaces del header */
 header nav {
-    display: flex; /* Ocultar los enlaces por defecto en pantallas pequeñas */
+    display: none; /* Ocultar los enlaces por defecto en pantallas pequeñas */
   }
   
-  header .menu-toggle {
-    display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+  header .menu-hamburguesa {
+    display: block; /* Mostrar el menú hamburguesa por defecto */
   }
 
 /* Menú en pantallas pequeñas (máximo 768px) */
@@ -228,6 +228,9 @@ header nav {
     nav ul li {
         margin: 5px 0;
     }
+    nav {
+        display: none; /* El menú estará visible siempre en pantallas grandes */
+    }
 
     /* Botón de navegación */
     .menu-toggle {
@@ -243,6 +246,11 @@ header nav {
         display: none; /* Ocultar el menú por defecto en dispositivos móviles */
         flex-direction: column; /* Muestra los enlaces de forma vertical */
         padding: 10px 0;
+    }
+
+    /* Mostrar menú cuando se active el toggle */
+    nav.active ul {
+        display: flex;
     }
 
     nav ul li a {
@@ -537,7 +545,7 @@ form button[type="submit"]:hover {
     }
 
     nav ul {
-        flex-direction: row;
+        flex-direction: column;
         margin-top: 10px;
     }
     nav ul li {
