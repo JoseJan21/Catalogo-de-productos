@@ -29,6 +29,11 @@ header {
     align-items: center;
     z-index: 1000;
 }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* Logo y nombre */
 .logo-nombre {
