@@ -162,11 +162,6 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-/* Menú oculto por defecto en pantallas pequeñas */
-nav {
-    display: none;
-}
-
 /* Cuando se activa la clase 'active', se muestra el menú */
 nav.active {
     display: block;
@@ -182,7 +177,7 @@ nav.active {
 }
 /* Estilos para los enlaces del header */
 header nav {
-    display: none; /* Ocultar los enlaces por defecto en pantallas pequeñas */
+    display: block; /* Ocultar los enlaces por defecto en pantallas pequeñas */
   }
   
   header .menu-hamburguesa {
