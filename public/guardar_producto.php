@@ -14,9 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     // Verificar si el directorio es escribible
-    if (!is_writable($target_dir)) {
-        die("El directorio no tiene permisos de escritura. Contacta al administrador.");
-    }
+    // if (!is_writable($target_dir)) {
+    //     die("El directorio no tiene permisos de escritura. Contacta al administrador.");
+    // }
 
     // Inicializar variables para la portada y galerías
     $portada_path = null;
