@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 55px; /* Altura del header */
     background-color: #017db0;
     /* margin-top: 80px; */
     background-size: cover;
@@ -153,24 +154,22 @@ nav ul li a {
 
 
 /* Asegura que la galería tenga un ancho máximo y se centre */
-/* Contenedor de la galería */
 .galeria {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a la línea siguiente si no caben */
-    justify-content: space-between; /* Distribuye espacio uniformemente */
-    gap: 10px; /* Espaciado entre los elementos */
-    margin: 10px auto; /* Centra la galería horizontalmente */
-    max-width: 800px; /* Ancho máximo de la galería */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* max-width: 800px; Ancho máximo de la galería */
+    /* margin: 10px; */
+    padding: 20px;
+    gap: 10px; /* Espacio entre los elementos */
 }
 
-/* Estilo para las imágenes de la galería */
+/* Ajusta el estilo de las imágenes y videos en la galería */
 .galeria img {
-    flex: 1 1 calc(33.33% - 10px); /* Cada imagen ocupa un tercio del contenedor menos el gap */
-    max-width: calc(33.33% - 10px); /* Mismo cálculo para evitar conflictos */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    border-radius: 10px; /* Bordes redondeados */
-    object-fit: cover; /* Asegura que la imagen se recorte bien si es necesario */
-    box-sizing: border-box; /* Incluye el padding y border en las dimensiones */
+    width: 100%;
+    max-width: calc(33.33% - 20px); /* Espacio entre imágenes */
+    height: auto;
+    margin: 10px 0;
 }
 
 
@@ -379,6 +378,8 @@ form button[type="submit"]:hover {
     .galeria img, 
     .galeria video {
         max-width: 100%; /* En móviles, las imágenes y videos ocupan todo el ancho */
+        margin: 0 auto 10px;
+
     }
     
 
