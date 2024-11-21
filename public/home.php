@@ -45,12 +45,15 @@ $result = $conn->query("SELECT * FROM productos");
         <?php while ($row = $result->fetch_assoc()): ?>
             <div class="producto">
                 <a href="detalles_producto.php?id=<?php echo $row['id']; ?>">
-                    <!-- Validación para asegurarse de que la portada existe -->
-                    <?php if (!empty($row['portada']) && file_exists("../imagenes/" . $row['portada'])): ?>
-                        <img src="../imagenes/<?php echo htmlspecialchars($row['portada']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
-                    <?php else: ?>
-                        <img src="../imagenes/default-image.png" alt="Imagen no disponible"> <!-- Imagen por defecto -->
-                    <?php endif; ?>
+                    <!-- Validación y generación de la URL dinámica -->
+                    <?php
+                    if (!empty($row['portada'])) {
+                        $portada = htmlspecialchars($row['portada']);
+                        echo "<img src='{$portada}' alt='" . htmlspecialchars($row['name']) . "'>";
+                    } else {
+                        echo "<img src='../imagenes/default-image.png' alt='Imagen no disponible'>"; // Imagen por defecto
+                    }
+                    ?>
                     <h3><?php echo htmlspecialchars($row['name']); ?></h3>
                     <p><?php echo htmlspecialchars($row['description']); ?></p>
                     <span><?php echo number_format($row['price'], 2); ?> AR</span>

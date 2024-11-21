@@ -93,13 +93,5 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     
     <!-- Incluir el footer -->
     <?php include 'footer.php'; ?>
-
-    <script>
-        function cargarMas() {
-            const items = document.querySelectorAll('.galeria .item');
-            items.forEach(item => item.style.display = 'block');
-            document.getElementById('verMas').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
