@@ -244,12 +244,6 @@ header nav {
         display: none; /* Ocultar el menú hamburguesa cuando la pantalla sea mayor a 1000px */
       }
 
-     /* Ajuste para dispositivos móviles */
-     .header-container {
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-    }
 }
 
 .galeria img {
@@ -513,9 +507,6 @@ form button[type="submit"]:hover {
     }
     .catalogo{
         padding: 0px;
-    }
-    .header {
-        height: 100px;
     }
     
     .btn-editar{
