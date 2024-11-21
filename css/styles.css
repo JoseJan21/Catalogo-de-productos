@@ -180,6 +180,14 @@ nav.active {
     cursor: pointer;
     display: none; /* Se esconde en pantallas grandes */
 }
+/* Estilos para los enlaces del header */
+header nav {
+    display: none; /* Ocultar los enlaces por defecto en pantallas pequeñas */
+  }
+  
+  header .menu-hamburguesa {
+    display: block; /* Mostrar el menú hamburguesa por defecto */
+  }
 
 /* Menú en pantallas pequeñas (máximo 768px) */
 @media screen and (max-width: 768px) {
@@ -249,6 +257,13 @@ nav.active {
         font-size: 18px; /* Aumentar el tamaño del texto */
         padding: 10px;
     }
+    header nav {
+        display: block; /* Mostrar los enlaces cuando la pantalla sea mayor a 1000px */
+      }
+    
+      header .menu-hamburguesa {
+        display: none; /* Ocultar el menú hamburguesa cuando la pantalla sea mayor a 1000px */
+      }
 }
 
 .galeria img {
