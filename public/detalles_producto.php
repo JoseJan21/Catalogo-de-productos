@@ -39,48 +39,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <title><?php echo htmlspecialchars($product['name']); ?></title>
     <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .detalle-producto {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .descripcion img {
-            max-width: 50%;
-            height: auto;
-        }
-
-        .descripcion h1 {
-            font-size: 2em;
-        }
-
-        .descripcion span {
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-
-        .galeria img,
-        .galeria video {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0;
-        }
-
-        .galeria .item {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .descripcion img {
-                max-width: 100%;
-            }
-        }
-
-        .video-youtube {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
