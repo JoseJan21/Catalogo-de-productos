@@ -180,30 +180,6 @@ nav.active {
     cursor: pointer;
     display: none; /* Se esconde en pantallas grandes */
 }
-/* Estilos para los enlaces del header */
-header nav {
-    display: none; /* Ocultar los enlaces por defecto en pantallas pequeñas */
-  }
-  
-  header .menu-hamburguesa {
-    display: block; /* Mostrar el menú hamburguesa por defecto */
-  }
-
-/* Menú en pantallas pequeñas (máximo 768px) */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Muestra el botón en pantallas pequeñas */
-    }
-
-    nav ul {
-        flex-direction: column; /* Muestra los enlaces de forma vertical */
-        padding: 10px 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
 
 @media (max-width: 1000px) {
     .galeria {
