@@ -73,12 +73,12 @@ nav ul li a {
     padding: 10px;
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     color: #ffffff;
     background-color: #00415d;
     
     border-radius: 20px;
-}
+} */
 
 .catalogo {
     display: flex;
@@ -165,6 +165,7 @@ nav ul li a:hover {
 /* Ajusta el estilo de las imágenes y videos en la galería */
 .galeria img {
     width: 100%; /* Ocupar todo el ancho del contenedor */
+    max-width: calc(33.33% - 10px); 
     height: auto;
     border-radius: 10px;
     object-fit: cover;
