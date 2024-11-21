@@ -265,12 +265,26 @@ header nav {
         margin: 0 auto 10px;
     }
 
-    /* Estilos para pantallas grandes */
     .detalle-producto .descripcion {
-        flex-direction: row;
-        text-align: left;
-        margin-top: 90px;
+        flex-direction: column; /* Cambia a diseño en columna */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto */
+        gap: 10px; /* Ajusta el espacio entre los elementos */
+        margin: 0px;
         padding: 20px;
+        /* text-align: left; */
+
+    }
+    .detalle-producto .descripcion img {
+        max-width: 100%; /* Imagen ocupa todo el ancho disponible */
+        height: auto;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    .detalle-producto .descripcion h1,
+    .detalle-producto .descripcion p,
+    .detalle-producto .descripcion span {
+        max-width: 90%; /* Ajusta el ancho de texto para pantallas pequeñas */
     }
     .presentacion-negocio {
         flex-direction: column;
