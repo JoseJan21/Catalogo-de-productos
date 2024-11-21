@@ -163,11 +163,11 @@ nav ul li a {
     margin: 0 auto;
 }
 
-/* @media (max-width: 1024px) {
+@media (max-width: 1000px) {
     .galeria {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
-} */
+}
 
 .galeria img {
     width: 100%;
@@ -377,9 +377,6 @@ form button[type="submit"]:hover {
 
 @media (max-width: 768px) {
     /* Para dispositivos móviles */
-    .galeria {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
     .galeria video {
         max-width: 100%; /*En móviles, las imágenes y videos ocupan todo el ancho */
         margin: 0 auto 10px;
