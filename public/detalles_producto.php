@@ -82,8 +82,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
             <?php endif; ?>
         </div>
 
-        <button id="verMas" onclick="cargarMas()">Ver más</button>
-
         <?php if (!empty($product['youtube_iframe'])): ?>
             <div class="video-youtube">
                 <?php echo htmlspecialchars_decode($product['youtube_iframe']); ?>
