@@ -221,12 +221,12 @@ nav.active {
         margin: 5px 0;
     }
     nav {
-        display: block; /* El menú estará visible siempre en pantallas grandes */
+        display: none; /* El menú estará visible siempre en pantallas grandes */
     }
 
     /* Botón de navegación */
     .menu-toggle {
-        display: none;
+        display: block;
         cursor: pointer;
         font-size: 30px;
         color: #fff;
