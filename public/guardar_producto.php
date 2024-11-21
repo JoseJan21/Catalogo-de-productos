@@ -9,16 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $youtube_iframe = $_POST['youtube_iframe'];
 
     // Directorio de destino para las imágenes y videos
-    // $target_dir = "../imagenes/";
     $target_dir = "/mnt/data/imagenes/";
 
-    // $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/imagenes/';
-
-    if (!is_dir($target_dir)) {
-    mkdir($target_dir, 0777, true); // Crea el directorio con permisos completos
+    // Verificar si el directorio es escribible
+    if (!is_writable($target_dir)) {
+        die("El directorio no tiene permisos de escritura. Contacta al administrador.");
     }
-    chmod($target_dir, 0777); // Asegura permisos de escritura
-    
+
     // Inicializar variables para la portada y galerías
     $portada_path = null;
     $galerias = [];
@@ -49,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (move_uploaded_file($_FILES["portada"]["tmp_name"], $portada_file)) {
                 $portada_path = $portada_filename; // Guardar solo el nombre del archivo
             } else {
-                echo "Lo siento, hubo un error al subir la imagen de portada.<br>";
+                die("Error: No se pudo mover el archivo de portada. Verifica los permisos del directorio.");
             }
         }
     } else {
