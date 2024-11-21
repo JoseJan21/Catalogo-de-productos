@@ -9,7 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $youtube_iframe = $_POST['youtube_iframe'];
 
     // Directorio de destino para las imágenes y videos
-    $target_dir = "../imagenes/";
+    // $target_dir = "../imagenes/";
+    $target_dir = "/mnt/data/imagenes/";
+
     // $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/imagenes/';
 
     if (!is_dir($target_dir)) {
