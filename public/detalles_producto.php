@@ -39,6 +39,48 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <title><?php echo htmlspecialchars($product['name']); ?></title>
     <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .detalle-producto {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .descripcion img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .descripcion h1 {
+            font-size: 2em;
+        }
+
+        .descripcion span {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .galeria img,
+        .galeria video {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .galeria .item {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .descripcion img {
+                max-width: 100%;
+            }
+        }
+
+        .video-youtube {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -47,7 +89,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
     <section class="detalle-producto">
         <div class="descripcion">
-            <img src="../imagenes/<?php echo htmlspecialchars($product['portada']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+            <img src="<?php echo htmlspecialchars($product['portada']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
             <div>
                 <h1><?php echo htmlspecialchars($product['name']); ?></h1>
                 <p><?php echo nl2br(htmlspecialchars($product['description'])); ?></p>
@@ -63,20 +105,26 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
             </div>
         </div>
 
-        <div class="galeria">
+        <div class="galeria" id="galeria">
             <?php if (!empty($galerias)): ?>
-                <?php foreach ($galerias as $archivo): ?>
-                    <?php if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $archivo)): ?>
-                        <img src="../imagenes/<?php echo htmlspecialchars($archivo); ?>" alt="Galería de <?php echo htmlspecialchars($product['name']); ?>">
-                    <?php elseif (preg_match('/\.(mp4|webm|ogg)$/i', $archivo)): ?>
-                        <video controls>
-                            <source src="../imagenes/<?php echo htmlspecialchars($archivo); ?>" type="video/<?php echo pathinfo($archivo, PATHINFO_EXTENSION); ?>">
-                            Tu navegador no soporta el video.
-                        </video>
-                    <?php endif; ?>
+                <?php foreach ($galerias as $index => $archivo): ?>
+                    <div class="item" style="<?php echo $index > 5 ? 'display: none;' : ''; ?>">
+                        <?php if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $archivo)): ?>
+                            <img src="<?php echo htmlspecialchars($archivo); ?>" alt="Galería de <?php echo htmlspecialchars($product['name']); ?>">
+                        <?php elseif (preg_match('/\.(mp4|webm|ogg)$/i', $archivo)): ?>
+                            <video controls>
+                                <source src="<?php echo htmlspecialchars($archivo); ?>" type="video/<?php echo pathinfo($archivo, PATHINFO_EXTENSION); ?>">
+                                Tu navegador no soporta el video.
+                            </video>
+                        <?php endif; ?>
+                    </div>
                 <?php endforeach; ?>
+            <?php else: ?>
+                <p>No hay imágenes o videos disponibles para este producto.</p>
             <?php endif; ?>
         </div>
+
+        <button id="verMas" onclick="cargarMas()">Ver más</button>
 
         <?php if (!empty($product['youtube_iframe'])): ?>
             <div class="video-youtube">
@@ -88,5 +136,12 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <!-- Incluir el footer -->
     <?php include 'footer.php'; ?>
 
+    <script>
+        function cargarMas() {
+            const items = document.querySelectorAll('.galeria .item');
+            items.forEach(item => item.style.display = 'block');
+            document.getElementById('verMas').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
