@@ -30,9 +30,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </nav>
     </div>
 </header>
-
 <!-- Mensaje flotante de notificación -->
 <div id="notification" class="notification"></div>
-
 </body>
 </html>
