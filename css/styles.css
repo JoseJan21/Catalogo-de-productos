@@ -158,7 +158,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     /* max-width: 800px; Ancho máximo de la galería */
-   margin: 10px;
+    margin: 10px;
     gap: 10px; /* Espacio entre los elementos */
 }
 
