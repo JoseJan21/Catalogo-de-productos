@@ -4,7 +4,6 @@ body {
     padding: 0;
     padding-top: 55px; /* Altura del header */
     background-color: #017db0;
-    /* margin-top: 80px; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,6 +13,7 @@ body {
 a {
     text-decoration: none;
 }
+
 /* Header */
 header {
     background-color: #00415d;
@@ -73,13 +73,8 @@ nav ul li a:hover {
     background-color: #006a8e;
     border-radius: 5px;
 }
-/* nav ul li a:hover {
-    color: #ffffff;
-    background-color: #00415d;
-    
-    border-radius: 20px;
-} */
 
+/* Catalogo */
 .catalogo {
     display: flex;
     flex-wrap: wrap;
@@ -111,17 +106,17 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 20px;
 }
-/* Para la vista de producto: imagen a la izquierda y descripción a la derecha */
+
+/* Detalle producto */
 .detalle-producto .descripcion {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 20px; /* Espacio entre la imagen y la descripción */
+    gap: 20px;
     text-align: left;
     margin: 90px;
 }
 
-/* Estilo de la imagen de portada */
 .detalle-producto .descripcion img {
     max-width: 50%; /* Imagen ocupa el 50% del ancho */
     height: auto;
@@ -130,9 +125,8 @@ nav ul li a:hover {
     margin-right: 20px;
 }
 
-/* Contenedor de la información del producto */
 .detalle-producto .descripcion .info {
-    flex: 1; /* Toma el espacio restante a la derecha */
+    flex: 1;
 }
 
 .detalle-producto .descripcion h1 {
@@ -151,64 +145,47 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-
-/* Asegura que la galería tenga un ancho máximo y se centre */
-/* Estilo actualizado para la galería */
+/* Galería de imágenes */
 .galeria {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* Máximo 3 columnas */
-    gap: 10px; /* Espacio entre las imágenes */
+    gap: 10px;
     padding: 20px;
     margin: 0 auto;
 }
 
-/* Menú oculto por defecto en pantallas pequeñas */
-nav {
-    display: none;
-}
-
-/* Cuando se activa la clase 'active', se muestra el menú */
-nav.active {
-    display: block;
-}
-
-/* Estilo del botón hamburguesa */
-.menu-toggle {
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    display: none; /* Se esconde en pantallas grandes */
-}
-
 @media (max-width: 1000px) {
+    /* Ajustes para pantallas más pequeñas */
     .galeria {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr)); /* Una sola columna en pantallas pequeñas */
     }
-     /* Logo y nombre */
-     .logo-nombre {
-        align-items: center; /* Centrar logo y texto en pantallas pequeñas */
+
+    /* Logo y nombre */
+    .logo-nombre {
+        align-items: center;
     }
 
     .logo-nombre h1 {
-        font-size: 20px; /* Reducir el tamaño del texto en pantallas pequeñas */
+        font-size: 20px;
     }
 
-    /* Navegación: convertir en un menú hamburguesa */
+    /* Navegación */
     nav ul {
         width: 100%;
         text-align: center;
         padding: 0;
+        flex-direction: column; /* Menú vertical */
     }
 
     nav ul li {
         margin: 5px 0;
     }
+
     nav {
-        display: none; /* El menú estará visible siempre en pantallas grandes */
+        display: none; /* El menú estará oculto por defecto en pantallas pequeñas */
     }
 
-    /* Botón de navegación */
+    /* Botón hamburguesa */
     .menu-toggle {
         display: block;
         cursor: pointer;
@@ -218,29 +195,28 @@ nav.active {
         border: none;
     }
 
-    nav ul {
-        display: none; /* Ocultar el menú por defecto en dispositivos móviles */
-        flex-direction: column; /* Muestra los enlaces de forma vertical */
-        padding: 10px 0;
-    }
-
     /* Mostrar menú cuando se active el toggle */
-    nav.active ul {
-        display: flex;
+    nav.active {
+        display: block;
     }
 
     nav ul li a {
-        font-size: 18px; /* Aumentar el tamaño del texto */
+        font-size: 18px;
         padding: 10px;
     }
-    header nav {
-        display: block; /* Mostrar los enlaces cuando la pantalla sea mayor a 1000px */
-      }
-    
-      header .menu-hamburguesa {
-        display: none; /* Ocultar el menú hamburguesa cuando la pantalla sea mayor a 1000px */
-      }
 }
+
+@media (max-width: 600px) {
+    /* Ajustes adicionales para pantallas muy pequeñas */
+    .logo-nombre h1 {
+        font-size: 18px;
+    }
+
+    .producto img {
+        height: 400px; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+    }
+}
+
 
 .galeria img {
     width: 100%;
