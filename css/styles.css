@@ -184,22 +184,6 @@ header nav {
     display: block; /* Mostrar el menú hamburguesa por defecto */
   }
 
-/* Menú en pantallas pequeñas (máximo 768px) */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Muestra el botón en pantallas pequeñas */
-    }
-
-    nav ul {
-        flex-direction: column; /* Muestra los enlaces de forma vertical */
-        padding: 10px 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
 @media (max-width: 1000px) {
     .galeria {
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -239,7 +223,7 @@ header nav {
 
     nav ul {
         display: none; /* Ocultar el menú por defecto en dispositivos móviles */
-        flex-direction: column; /* Muestra los enlaces de forma vertical */
+        flex-direction: row; /* Muestra los enlaces de forma vertical */
         padding: 10px 0;
     }
 
@@ -259,6 +243,13 @@ header nav {
       header .menu-hamburguesa {
         display: none; /* Ocultar el menú hamburguesa cuando la pantalla sea mayor a 1000px */
       }
+
+     /* Ajuste para dispositivos móviles */
+     .header-container {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .galeria img {
@@ -526,9 +517,7 @@ form button[type="submit"]:hover {
     .header {
         height: 100px;
     }
-    .logo{
-        height: 80px;
-    }
+    
     .btn-editar{
         padding: 30px 70px;
         font-size: 50px;
@@ -540,23 +529,6 @@ form button[type="submit"]:hover {
         padding: 30px 70px;
         font-size: 50px;
         border-radius: 30px;
-    }
-
-     /* Ajuste para dispositivos móviles */
-     .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .logo-nombre {
-        margin-bottom: 10px;
-    }
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-    nav ul li {
-        margin: 5px 0;
     }
 }
 
