@@ -14,7 +14,6 @@ body {
 a {
     text-decoration: none;
 }
-
 /* Header */
 header {
     background-color: #00415d;
@@ -31,14 +30,16 @@ header {
     z-index: 1000;
 }
 
+/* Logo y nombre */
 .logo-nombre {
     display: flex;
     align-items: center;
+    gap: 10px; /* Espacio entre el logo y el nombre */
 }
 
 .logo {
     height: 40px;
-    margin-right: 10px;
+    width: auto;
 }
 
 .logo-nombre h1 {
@@ -47,6 +48,7 @@ header {
     margin: 0;
 }
 
+/* Navegación */
 nav {
     display: flex;
     align-items: center;
@@ -163,6 +165,51 @@ nav ul li a:hover {
 @media (max-width: 1000px) {
     .galeria {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+     /* Logo y nombre */
+     .logo-nombre {
+        flex-direction: column;
+        align-items: center; /* Centrar logo y texto en pantallas pequeñas */
+    }
+
+    .logo-nombre h1 {
+        font-size: 20px; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+
+    /* Navegación: convertir en un menú hamburguesa */
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Botón de navegación */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: #fff;
+        background: none;
+        border: none;
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú por defecto en dispositivos móviles */
+    }
+
+    /* Mostrar menú cuando se active el toggle */
+    nav.active ul {
+        display: flex;
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Aumentar el tamaño del texto */
+        padding: 10px;
     }
 }
 

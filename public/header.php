@@ -18,19 +18,25 @@
             <img src="../imagenes/logo.png" alt="Logo de la Empresa" class="logo">
             <h1>Panda Sonido</h1>
         </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav>
             <ul>
                 <li><a href="../public/home.php">Inicio</a></li>
                 <?php if (isset($_SESSION['usuario_id'])): ?>
                     <li><a href="../public/crear_producto.php">Crear Producto</a></li>
-                    <!-- <li><a href="../public/crear_usuario.php">Crear Usuario</a></li> Enlace a crear usuario -->
                     <li><a href="../public/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
     </div>
 </header>
-<!-- Mensaje flotante de notificación -->
-<div id="notification" class="notification"></div>
+<script>
+    // Aquí va tu código JavaScript
+    document.addEventListener('DOMContentLoaded', function () {
+        // Este código se ejecutará cuando el DOM esté completamente cargado
+        console.log('Página cargada correctamente');
+    });
+</script>
+
 </body>
 </html>
