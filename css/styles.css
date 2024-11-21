@@ -58,6 +58,13 @@ header {
 nav {
     display: flex;
     align-items: center;
+
+    flex-direction: column; /* Apilar los enlaces verticalmente */
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #00415d; /* Fondo del menú desplegado */
+    position: absolute; /* Para que se superponga al contenido */
+    top: 55px; /* Justo debajo del header */
+    left: 0;
 }
 
 nav ul {
