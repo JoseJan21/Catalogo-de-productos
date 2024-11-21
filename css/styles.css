@@ -190,7 +190,7 @@ nav ul li a:hover {
         display: block;
         cursor: pointer;
         font-size: 30px;
-        color: #fff;
+        /* color: #fff; */
         background: none;
         border: none;
     }
@@ -204,6 +204,9 @@ nav ul li a:hover {
         font-size: 18px;
         padding: 10px;
     }
+}
+nav {
+    display: block;
 }
 
 @media (max-width: 600px) {
