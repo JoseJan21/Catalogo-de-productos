@@ -24,7 +24,7 @@
                 <?php if (isset($_SESSION['usuario_id'])): ?>
                     <li><a href="../public/crear_producto.php">Crear Producto</a></li>
                     <!-- <li><a href="../public/crear_usuario.php">Crear Usuario</a></li> Enlace a crear usuario -->
-                    <li><a href="../public/cerrar_sesion.php">Cerrar Sesión</a></li>
+                    <li><a href="../public/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
