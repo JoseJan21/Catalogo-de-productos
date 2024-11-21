@@ -32,10 +32,10 @@
 </header>
 <script>
     // Aquí va tu código JavaScript
-    document.addEventListener('DOMContentLoaded', function () {
-        // Este código se ejecutará cuando el DOM esté completamente cargado
-        console.log('Página cargada correctamente');
-    });
+    document.addEventListener('DOMContentLoaded', function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('active'); // Alterna la clase 'active' que muestra/oculta el menú
+});
 </script>
 
 </body>
