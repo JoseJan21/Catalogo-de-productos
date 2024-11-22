@@ -218,9 +218,7 @@ header nav {
         background-color: #000000;
         justify-content: center;
     }
-    .form{
-        margin: auto;
-    }
+    
 @media (max-width: 1000px) {
     .galeria {
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -360,6 +358,10 @@ header nav {
         border-radius: 30px;
     } */
 
+}
+
+.form{
+    margin: auto;
 }
 
 .galeria img {
