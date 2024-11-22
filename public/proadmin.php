@@ -10,16 +10,18 @@
 <body>
     <?php include "header.php"; ?>
 
-    <form action="procesar_login.php" method="POST">
-        <h2>Iniciar Sesión</h2>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" id="email" required>
-        
-        <label for="password">Contraseña:</label>
-        <input type="password" name="password" id="password" required>
-        
-        <button type="submit">Iniciar Sesión</button>
-    </form>
+    <div class="form">
+        <form action="procesar_login.php" method="POST">
+            <h2>Iniciar Sesión</h2>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password" required>
+            
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
     <!-- Incluir el footer -->
     <?php include 'footer.php'; ?>
 </body>

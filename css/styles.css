@@ -334,6 +334,9 @@ header nav {
     form button {
         font-size: 14px;
     }
+    .form{
+        margin: 20px;
+    }
 
     /* .btn-editar{
         padding: 30px 70px;
