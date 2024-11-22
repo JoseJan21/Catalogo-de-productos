@@ -1,6 +1,6 @@
 <footer class="footer">
-    <p>&copy; Catálogo de productos</p>
-    <p>Contáctame</p>
+    <p> Panda Sonido &copy; Catálogo de productos</p>
+    <p>Contáctanos</p>
     <div class="social-links"> <!-- Aquí se usa la clase social-links -->
         <a href="https://www.instagram.com/pandasonido/" target="_blank">
             <img src="../imagenes/instagram-icon.png" alt="Instagram">

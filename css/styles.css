@@ -16,6 +16,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+html{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -303,6 +314,7 @@ header nav {
     }
     .contacto-redes{
         gap: 62px;
+        justify-content: center;
     }
     .catalogo{
         padding: 0px;
@@ -535,13 +547,19 @@ form button[type="submit"]:hover {
     background-color: #f00;
     border-radius: 40px;
 }
-footer {
-    background-color: #00415d;
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-}
 
+/* Estilos generales para el footer */
+.footer {
+    position: relative; /* Cambia a "absolute" o "fixed" si es necesario */
+    width: 100%;
+    background-color: #00415d; /* Fondo oscuro para un diseño minimalista */
+    color: #fff; /* Texto en blanco para contraste */
+    text-align: center; /* Centrar el contenido */
+    padding: 20px 10px; /* Espaciado interno */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Opcional: sombra para elevar visualmente */
+    margin-top: auto; /* Empuja el footer al fondo */
+}
 footer a {
     color: #ffffff;
     text-decoration: none;
