@@ -27,7 +27,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <?php include "header.php"; ?>
 
     
-    <section>
+    <section class="form">
         <form action="guardar_producto.php" method="POST" enctype="multipart/form-data">
             <label for="nombre">Nombre del Producto:</label>
             <input type="text" name="nombre" id="nombre" required>
