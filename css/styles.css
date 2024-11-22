@@ -354,10 +354,12 @@ header nav {
 
 .presentacion-negocio {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    padding: 100px 20px;
     background-color: #000000;
+    justify-content: center;
 }
 
 .contenido-presentacion {
