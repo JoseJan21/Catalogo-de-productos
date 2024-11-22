@@ -1,6 +1,9 @@
 <?php
 // Inicia la sesión solo si no está activa
-// session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+session_start();
 // Obtener las variables de entorno usando $_ENV
 $DB_HOST = $_ENV['DB_HOST'];
 $DB_USER = $_ENV['DB_USER'];
