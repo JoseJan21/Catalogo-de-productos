@@ -320,6 +320,21 @@ header nav {
         padding: 0px;
     }
 
+    form {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
     /* .btn-editar{
         padding: 30px 70px;
         font-size: 50px;

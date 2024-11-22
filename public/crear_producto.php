@@ -4,7 +4,7 @@ session_start();
 // Verificar si el administrador está logeado
 if (!isset($_SESSION['usuario_id'])) {
     // Si no está logeado, redirigir al inicio de sesión
-    header("Location: inicio_sesion.php");
+    header("Location: proadmin.php");
     exit();
 }
 ?>
