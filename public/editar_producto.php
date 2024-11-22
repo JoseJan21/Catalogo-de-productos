@@ -97,7 +97,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
                 <label for="portada">Imagen de Portada:</label>
                 <?php if (!empty($product['portada'])): ?>
-                    <img src="../imagenes/<?php echo htmlspecialchars($product['portada']); ?>" alt="Portada Actual" width="150">
+                    <img src="<?php echo htmlspecialchars($product['portada']); ?>" alt="Portada Actual" width="150">
                 <?php endif; ?>
                 <input type="file" name="portada" id="portada">
 
@@ -106,9 +106,9 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                     <div class="galeria">
                         <?php foreach (json_decode($product['galerias'], true) as $archivo): ?>
                             <?php if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $archivo)): ?>
-                                <img src="../imagenes/<?php echo htmlspecialchars($archivo); ?>" alt="Galería Imagen" width="100">
+                                <img src="<?php echo htmlspecialchars($archivo); ?>" alt="Galería Imagen" width="100">
                             <?php elseif (preg_match('/\.(mp4|webm|ogg)$/i', $archivo)): ?>
-                                <video src="../imagenes/<?php echo htmlspecialchars($archivo); ?>" width="100" controls></video>
+                                <video src="<?php echo htmlspecialchars($archivo); ?>" width="100" controls></video>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
