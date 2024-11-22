@@ -1,5 +1,5 @@
-<!-- index.php -->
 <?php
-include 'public/config.php';
-include 'public/home.php'; 
+// Redirige al usuario a la página principal
+header("Location: /public/home.php");
+exit;
 ?>
