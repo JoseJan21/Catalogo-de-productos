@@ -222,6 +222,8 @@ header nav {
     .conten-form{
         display: flex;
         margin: 20px;
+        margin-top: 60px;
+        margin-bottom: 60px;
         justify-content: center;
     }
     form {
@@ -229,6 +231,12 @@ header nav {
     }
     
 @media (max-width: 1000px) {
+    .conten-form{
+        display: flex;
+        margin: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     .galeria {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
