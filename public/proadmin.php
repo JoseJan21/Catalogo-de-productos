@@ -8,6 +8,8 @@
 
 </head>
 <body>
+    <?php include "header.php"; ?>
+
     <form action="procesar_login.php" method="POST">
         <h2>Iniciar Sesión</h2>
         <label for="email">Correo electrónico:</label>
@@ -18,5 +20,7 @@
         
         <button type="submit">Iniciar Sesión</button>
     </form>
+    <!-- Incluir el footer -->
+    <?php include 'footer.php'; ?>
 </body>
 </html>
