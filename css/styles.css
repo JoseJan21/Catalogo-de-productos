@@ -224,6 +224,9 @@ header nav {
         margin: 20px;
         justify-content: center;
     }
+    form {
+        padding: 20px;
+    }
     
 @media (max-width: 1000px) {
     .galeria {
@@ -332,10 +335,6 @@ header nav {
     }
     .catalogo{
         padding: 0px;
-    }
-
-    form {
-        padding: 15px;
     }
 
     form input,
