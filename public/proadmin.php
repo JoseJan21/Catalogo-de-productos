@@ -10,7 +10,7 @@
 <body>
     <?php include "header.php"; ?>
 
-    <div class="form">
+    <div class="conten-form">
         <form action="procesar_login.php" method="POST">
             <h2>Iniciar Sesión</h2>
             <label for="email">Correo electrónico:</label>
