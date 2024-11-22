@@ -218,6 +218,12 @@ header nav {
         background-color: #000000;
         justify-content: center;
     }
+
+    .form{
+        display: flex;
+        margin: 20px;
+        justify-content: center;
+    }
     
 @media (max-width: 1000px) {
     .galeria {
@@ -357,11 +363,7 @@ header nav {
 
 }
 
-.form{
-    display: flex;
-    margin: 20px;
-    justify-content: center;
-}
+
 
 .galeria img {
     width: 100%;
