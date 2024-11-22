@@ -38,9 +38,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <?php include "header.php"; ?>
-    </header>
+    <?php include "header.php"; ?>
 
     <section class="detalle-producto">
         <div class="descripcion">
