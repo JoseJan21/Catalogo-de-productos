@@ -341,9 +341,6 @@ header nav {
     form button {
         font-size: 14px;
     }
-    .form{
-        margin: 20px;
-    }
 
     /* .btn-editar{
         padding: 30px 70px;
@@ -361,7 +358,9 @@ header nav {
 }
 
 .form{
-    margin: auto;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
 }
 
 .galeria img {
