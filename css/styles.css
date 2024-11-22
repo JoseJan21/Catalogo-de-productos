@@ -265,13 +265,8 @@ header nav {
         margin: 0 auto 10px;
     }
 
-    .detalle-producto .descripcion img {
-        max-width: 100%; /* Imagen ocupa todo el ancho disponible */
-        height: auto;
-        margin: 0 auto; /* Centra la imagen horizontalmente */
-    }
     .detalle-producto .descripcion {
-        flex-direction: row; /* Cambia a diseño en columna */
+        flex-direction: column; /* Cambia a diseño en columna */
         align-items: center; /* Centra los elementos */
         text-align: center; /* Centra el texto */
         gap: 10px; /* Ajusta el espacio entre los elementos */
@@ -279,6 +274,11 @@ header nav {
         padding: 20px;
         /* text-align: left; */
 
+    }
+    .detalle-producto .descripcion img {
+        max-width: 100%; /* Imagen ocupa todo el ancho disponible */
+        height: auto;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
     }
 
     .detalle-producto .descripcion h1,
