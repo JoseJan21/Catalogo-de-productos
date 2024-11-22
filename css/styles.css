@@ -289,6 +289,8 @@ header nav {
     .presentacion-negocio {
         flex-direction: column;
         text-align: center;
+        padding: 0px;
+
     }
     .contenido-presentacion {
         max-width: 100%;
@@ -296,9 +298,6 @@ header nav {
     }
     .imagen-presentacion img {
         max-width: 100%;
-    }
-    .presentacion-negocio {
-        padding: 50px;
     }
     .contacto-redes{
         gap: 62px;
